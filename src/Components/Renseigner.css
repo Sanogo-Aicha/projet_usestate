@@ -1,0 +1,20 @@
+#texterea{
+    width: 400px;
+    height: 100px;
+    
+}
+
+.renseigner{
+    border: 2px solid black;
+    height: 400PX;
+    text-align: center;
+}
+.button{
+    background-color: green;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+  }

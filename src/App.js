@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import './Components/Moviecards.css'
+import MovieList from './Components/MoviesList';
+import { Card } from 'react-bootstrap';
+import Barre from './Components/Barre_resh';
+import Movicard from './Components/Moviecards';
+import Film from './data/data';
+import Renseigner from './Components/Renseigner';
 
-function App() {
+
+function App() {  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="App">
+      <Card className='card'>
+      <MovieList />
+      </Card>
+      
+    </div>
+    
     </div>
   );
 }
