@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Film from "../data/data";
 import Movicard from "./Moviecards";
 import Renseigner from "./Renseigner";
+import { Link } from "react-router-dom";
 const MovieList = () => {
   const [sheatem, setSheatem] = useState("");
   const [movies,setMovie]=useState(Film)
@@ -16,7 +17,7 @@ const MovieList = () => {
   };
   return (
     <div>
-      <Renseigner handleNewmovie={handleNewmovie} />
+      
       <div>
         <input
           type="text"
@@ -28,6 +29,7 @@ const MovieList = () => {
       </div>
 
       <div className="cards">
+      <Renseigner handleNewmovie={handleNewmovie} />
         {
           <div>
             <div className="recherche_resultat">
@@ -38,13 +40,21 @@ const MovieList = () => {
                     .includes(sheatem.toLocaleLowerCase()) ||
                   val.note.toLocaleString().includes(sheatem.toLocaleString())
                 );
-              }).map((element) => {
-                return <Movicard cardcine={element} />;
+              })
+              .map((element) => {
+                return(
+                  <div className="card">
+                  <Link to={`desc/${element.id}`}>{element.titre},
+                {element.note}</Link>
+                </div>
+                )
               })}
             </div>
+            
           </div>
         }
       </div>
+      
     </div>
   );
 };

@@ -48,7 +48,7 @@ function Renseigner({ handleNewmovie }) {
         <input
           type="texte"
           name="posterUrl"
-          id=""
+          id="imput"
           placeholder="Url de la video"
           value={newMovieFrom.posterUrl}
           onChange={handleChange}

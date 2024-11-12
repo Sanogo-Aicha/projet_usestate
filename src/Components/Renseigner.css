@@ -1,13 +1,14 @@
 #texterea{
     width: 400px;
     height: 100px;
-    
+    background-color: white;
 }
-
 .renseigner{
     border: 2px solid black;
+    color: gray;
     height: 400PX;
     text-align: center;
+   background-color: midnightblue;
 }
 .button{
     background-color: green;
